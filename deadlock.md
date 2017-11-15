@@ -8,6 +8,25 @@ informando que todas as goroutines estão `asleep`.
 ```
 package main
 
+import (
+	"fmt"
+	"sync"
+)
+
+func main() {
+	var m sync.Mutex
+
+	m.Lock()
+	fmt.Println("waiting...")
+
+	m.Lock()
+	fmt.Println("waiting for the sun")
+}
+```
+
+```
+package main
+
 func main() {
 	ch1 := make(chan bool)
 	ch2 := make(chan bool)
