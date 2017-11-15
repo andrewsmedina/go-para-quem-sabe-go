@@ -14,20 +14,21 @@ Nesse workshop vamos aprender como explorar mais essas características de Go en
 
 ## Tipagem estática
 
-* fuzzy 
+* [fuzzy](fuzzy.md)
 * oracle
 
 ## Concorrência
 
 * scheduler
-* race conditions
-* dead locks
+* [goroutine leaks](goroutine-leaks.md)
+* [race conditions](race.md)
+* [dead locks](deadlock.md)
 
 ## Tooling
 
 * stack tracing
 * tracer
-* profile
+* [profile](profile.md)
 
 ## Runtime 
 
