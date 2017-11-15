@@ -6,6 +6,7 @@
 package main
 
 import (
+    
 	"fmt"
 )
 
@@ -64,4 +65,70 @@ Goroutine 6 (running) created at:
 ==================
 Found 1 data race(s)
 ```
- 
+
+## Os tipos mais comuns de race conditions
+
+### Race em um `loop counter`
+
+```
+package main
+
+import (
+    fmt
+    sync
+)
+
+func main() {
+	var wg sync.WaitGroup
+	wg.Add(5)
+	for i := 0; i < 5; i++ {
+		go func() {
+			fmt.Println(i) 
+			wg.Done()
+		}()
+	}
+	wg.Wait()
+}
+```
+
+### Variável compartilhada acidentalmente
+
+
+### Variável global 'não protegida'
+
+```
+var urls map[string]string
+
+func Register(name, url string) {
+	urls[name] = url
+}
+
+func Lookup(name string) string {
+	return urls[name]
+}
+```
+
+### Variável primitiva 'não protegida'
+
+```
+type Worker struct{ last int64 }
+
+func (w *Worker) KeepAlive() {
+	w.last = time.Now().UnixNano()
+}
+
+func (w *Worker) Start() {
+	go func() {
+		for {
+			time.Sleep(time.Second)
+			// Second conflicting access.
+			if w.last < time.Now().Add(-10*time.Second).UnixNano() {
+				fmt.Println("No keepalives for 10 seconds. Dying.")
+				os.Exit(1)
+			}
+		}
+	}()
+}
+```
+
+
