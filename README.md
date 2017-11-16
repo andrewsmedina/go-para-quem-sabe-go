@@ -19,7 +19,7 @@ Nesse workshop vamos aprender como explorar mais essas características de Go en
 
 ## Concorrência
 
-* scheduler
+* [scheduler](scheduler.md)
 * [goroutine leaks](goroutine-leaks.md) // wip
 * [race conditions](race.md)
 * [dead locks](deadlock.md)
