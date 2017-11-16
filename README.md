@@ -34,4 +34,4 @@ Nesse workshop vamos aprender como explorar mais essas características de Go en
 ## Runtime 
 
 * setfinalizer
-* called by 
+* [called by](calledby.md)
