@@ -28,7 +28,7 @@ Nesse workshop vamos aprender como explorar mais essas características de Go en
 
 * [godebug](godebug.md)
 * [stack trace](stacktrace.md)
-* tracer
+* [tracer](tracer.md)
 * [profile](profile.md) // wip
 
 ## Runtime 
