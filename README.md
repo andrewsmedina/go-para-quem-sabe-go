@@ -8,7 +8,7 @@ Nesse workshop vamos aprender como explorar mais essas características de Go en
 
 ## Compilação
 
-* conditional builds
+* [conditional builds](conditional.md)
 * gcflags
 * go generate
 
