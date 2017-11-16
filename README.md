@@ -10,17 +10,17 @@ Nesse workshop vamos aprender como explorar mais essas características de Go en
 
 * [conditional builds](conditional.md)
 * [gcflags](gcflags.md)
-* go generate
+* [go generate](gogenerate.md) // WIP
 
 ## Tipagem estática
 
-* [fuzzy](fuzzy.md)
+* [fuzzy](fuzzy.md) // WIP
 * oracle
 
 ## Concorrência
 
 * scheduler
-* [goroutine leaks](goroutine-leaks.md)
+* [goroutine leaks](goroutine-leaks.md) // wip
 * [race conditions](race.md)
 * [dead locks](deadlock.md)
 
@@ -28,7 +28,7 @@ Nesse workshop vamos aprender como explorar mais essas características de Go en
 
 * stack tracing
 * tracer
-* [profile](profile.md)
+* [profile](profile.md) // wip
 
 ## Runtime 
 
