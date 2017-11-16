@@ -26,6 +26,7 @@ Nesse workshop vamos aprender como explorar mais essas características de Go en
 
 ## Tooling
 
+* [godebug](godebug.md)
 * stack tracing
 * tracer
 * [profile](profile.md) // wip
