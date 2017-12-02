@@ -11,7 +11,6 @@ import (
 )
 
 func main() {
-	c := make(chan bool)
 	data := map[string]string{}
 	go func() {
 		data["name"] = "andrews"
@@ -21,7 +20,7 @@ func main() {
 		data["surname"] = "medina"
 	}()
 
-	<-c
+
 	for key, value := range data {
 		fmt.Println(key, value)
 	}
@@ -82,10 +81,10 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(5)
 	for i := 0; i < 5; i++ {
-		go func() {
-			fmt.Println(i) 
+		go func(x int) {
+			fmt.Println(x) 
 			wg.Done()
-		}()
+		}(i)
 	}
 	wg.Wait()
 }

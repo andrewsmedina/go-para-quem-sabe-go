@@ -24,3 +24,18 @@ Executando os testes
 ```
 $ go-fuzz -bin=fuzz.zip -workdir=workdir
 ```
+
+Exemplo:
+
+```
+package fuzzy
+
+func Fuzz(data []byte) int {
+	firstLetter(string(data))
+	return 0
+}
+
+func firstLetter(text string) string {
+	return string(text[0])
+}
+```
